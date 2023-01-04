@@ -1,6 +1,7 @@
 import { Category } from "./Category";
 import { Course } from "./Course";
-import { Episode } from "./episode";
+import { Episode } from "./Episode";
+import { User } from "./User";
 
 Category.hasMany(Course);
 
@@ -10,4 +11,4 @@ Course.hasMany(Episode);
 
 Episode.belongsTo(Course);
 
-export { Category, Course, Episode };
+export { Category, Course, Episode, User };

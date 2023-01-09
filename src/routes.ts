@@ -1,3 +1,4 @@
+import e from "express";
 import express from "express";
 import { authController } from "./controllers/authController";
 import { categoriesController } from "./controllers/categoriesController";
@@ -17,6 +18,7 @@ router.get("/categories/:id", ensureAuth, categoriesController.show);
 
 router.get("/courses/featured", ensureAuth, coursesController.featured);
 router.get("/courses/newest", coursesController.newest);
+router.get("/courses/popular", ensureAuth, coursesController.popular);
 router.get("/courses/search", ensureAuth, coursesController.search);
 router.get("/courses/:id", ensureAuth, coursesController.show);
 
